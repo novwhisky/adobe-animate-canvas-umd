@@ -2,22 +2,27 @@
 var fs = require('fs');
 var path = require('path');
 
-process.stdin.resume();
-process.stdin.setEncoding('utf8');
+var argv = require('minimist')(process.argv.slice(2));
+
+var template = fs.readFileSync(path.join(process.cwd(), 'src', 'template.js'));
+var inFile = argv._[0];
+var moduleNamespace = argv['module-name'] || path.parse(inFile).name;
 
 function Animate2UMD(exportJS) {
-  var template = fs.readFileSync(path.join(process.cwd(), 'src', 'template.js'));
   var replaceToken = '/**REPLACE**/';
-  var moduleNamespace = 'something';
   var moduleExport = exportJS+ '\n' + 'exports["' + moduleNamespace + '"] = lib';
   return template.toString().replace(replaceToken, moduleExport)  + '\n';
 }
 
-process.stdin.on('data', function(data){
-  process.stdout.on('error', function(err) {
-    if (err.code === 'EPIPE') return process.exit();
-    process.emit('error', err)
-  });
+var strm = fs.createReadStream(argv._[0]);
 
-  process.stdout.write(Animate2UMD(data));
-});
+  strm.on('data', function(data) {
+    var umd = Animate2UMD(data);
+
+    process.stdout.on('error', function(err) {
+      if (err.code === 'EPIPE') return process.exit();
+      process.emit('error', err)
+    });
+
+    process.stdout.write(umd);
+  });
