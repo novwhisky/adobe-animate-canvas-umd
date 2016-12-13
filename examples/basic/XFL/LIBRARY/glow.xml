@@ -1,0 +1,80 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="glow" itemID="584f574f-00000029" lastModified="1481594943">
+  <timeline>
+    <DOMTimeline name="glow" currentFrame="8">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="glow-graphic" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.5"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="glow-graphic" selected="true" symbolType="graphic" centerPoint3DX="-0.05" loop="loop">
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.75"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="8" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="glow-graphic" symbolType="graphic" centerPoint3DX="-0.05" loop="loop">
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.5"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#9933CC" locked="true" visible="false" layerType="guide">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!-9689 5659S4|-9688.5 5659.5!-9688.5 5659.5[#FFDAD6.4E #1729.55 -9145 6332!-9145 6332[-8407 7138 -7436 7810!-7436 7810[-6078 8750 -4451 9287!-4451 9287[-2418 9958 -80 9958!-80 9958[2258 9958 4296 9336!4296 9336[5925 8839 7291 7969!7291
+ 7969[8264 7348 9010 6602!9010 6602[9383 6230 9561 5983!9561 5983|13440 18356!13440 18356[13441 18361 985 18437!985 18437[-11474 18512 -11478 18516!-11478 18516[-11482 18526 -9689 5659"/>
+                    <Edge cubics="!-80 9958(;6722,9958 9559,5979 9561,5983q-80 9958Q2258 9958q4296 9336Q5925 8839q7291 7969Q8264 7348q9010 6602Q9383 6230q9561 5983);"/>
+                    <Edge cubics="!9561 5983(;9563,5987 13438,18348 13440,18356q9561 5983 13440 18356);"/>
+                    <Edge cubics="!13440 18356(;13444,18366 -11472,18508 -11478,18516q13440 18356Q13441 18361q985 18437Q-11474 18512q-11478 18516);"/>
+                    <Edge cubics="!-11478 18516(;-11482,18526 -9689,5659 -9689,5659q-11478 18516Q-11482 18526q-9689 5659);"/>
+                    <Edge cubics="!-9689 5659(;-9689,5659 -9688,5660 -9688,5660q-9689 5659 -9688 5660);"/>
+                    <Edge cubics="!-9688 5660(;-9572,5839 -9391,6063 -9145,6332q-9688 5660Q-9514 5929q-9145 6332);"/>
+                    <Edge cubics="!-9145 6332(;-8653,6869 -8083,7362 -7436,7810q-9145 6332Q-8407 7138q-7436 7810);"/>
+                    <Edge cubics="!-4451 9287(;-3096,9734 -1639,9958 -80,9958q-4451 9287Q-2418 9958q-80 9958);"/>
+                    <Edge cubics="!-7436 7810(;-6531,8437 -5536,8929 -4451,9287q-7436 7810Q-6078 8750q-4451 9287);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

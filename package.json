@@ -1,0 +1,21 @@
+{
+  "name": "adobe-animate-canvas-umd",
+  "version": "1.0.0",
+  "description": "A utility for wrapping Adobe Animate HTML5 canvas exports in modern web modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adobe",
+    "animate",
+    "animation",
+    "html5",
+    "canvas",
+    "umd",
+    "createjs",
+    "tweenjs"
+  ],
+  "author": "Nathan Witt <wittnl@gmail.com> (http://wi.tt/)",
+  "license": "MIT"
+}

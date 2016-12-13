@@ -1,0 +1,39 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="npm-wombat-typing.svg Assets/Layer 1/&amp;#060Path&amp;#062" itemID="584f5306-0000000a" lastModified="1481593606">
+  <timeline>
+    <DOMTimeline name="&amp;#060Path&amp;#062">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!540 0|540 100!540 100|0 100!0 100|0 255!0 255|7 288!7 288[19 326 45 354!45 354[61 360 65 360!65 360|10573 360!10573 360[10595 360 10613 350!10613 350[10649 306 10659 255!10659 255|10659 100!10659 100|10079 100!10079 100|10079 0!10079
+ 0|540 0"/>
+                    <Edge cubics="!540 0(540,0;540,0 540,100 540,100p540 0q540 100)540,100;"/>
+                    <Edge cubics="!540 100(;540,100 0,100 0,100p540 100q0 100);"/>
+                    <Edge cubics="!0 100(;0,100 0,255 0,255p0 100q0 255);"/>
+                    <Edge cubics="!0 255(;0,255 4,309 45,354q0 255Q0 255q7 288Q19 326q45 354);"/>
+                    <Edge cubics="!45 354(;53,357 56,360 65,360q45 354Q61 360q65 360);"/>
+                    <Edge cubics="!65 360(;65,360 10573,360 10573,360p65 360q10573 360);"/>
+                    <Edge cubics="!10573 360(;10586,360 10602,356 10613,350q10573 360Q10595 360q10613 350);"/>
+                    <Edge cubics="!10613 350(;10649,306 10659,255 10659,255q10613 350Q10649 306q10659 255);"/>
+                    <Edge cubics="!10659 255(;10659,255 10659,100 10659,100p10659 255q10659 100);"/>
+                    <Edge cubics="!10659 100(;10659,100 10079,100 10079,100p10659 100q10079 100);"/>
+                    <Edge cubics="!10079 100(;10079,100 10079,0 10079,0p10079 100q10079 0);"/>
+                    <Edge cubics="!10079 0(;10079,0 540,0 540,0q10079 0 540 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

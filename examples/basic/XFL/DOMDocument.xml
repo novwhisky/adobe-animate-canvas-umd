@@ -1,0 +1,81 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#CCCCCC" width="1080" height="720" frameRate="30" currentTimeline="1" xflVersion="2.8" creatorInfo="Adobe Animate CC" platform="Macintosh" versionInfo="Saved by Animate Macintosh 16.0 build 112" majorVersion="16" buildNumber="112" timelineLabelWidth="279" viewAngle3D="91.258197287559" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="3CE50BB6-55CF-47A6-B591-01286DDDC64C">
+     <folders>
+          <DOMFolderItem name="npm-wombat-typing.svg Assets" itemID="584f5306-00000007"/>
+          <DOMFolderItem name="npm-wombat-typing.svg Assets/Layer 1" itemID="584f5306-00000008"/>
+     </folders>
+     <symbols>
+          <Include href="glow.xml" loadImmediate="false" itemID="584f574f-00000029" lastModified="1481594943"/>
+          <Include href="glow-graphic.xml" itemIcon="1" loadImmediate="false" itemID="584f579e-0000002f" lastModified="1481594782"/>
+          <Include href="npm-wombat-typing.svg Assets/Layer 1/&amp;#060Path&amp;#062.xml" loadImmediate="false" itemID="584f5306-0000000a" lastModified="1481593606"/>
+          <Include href="npm-wombat-typing.svg Assets/Layer 1/&amp;#060Path&amp;#062_0.xml" loadImmediate="false" itemID="584f5306-0000000e" lastModified="1481593606"/>
+          <Include href="npm-wombat-typing.svg Assets/Layer 1/Logo_1.xml" loadImmediate="false" itemID="584f5306-0000000c" lastModified="1481593606"/>
+          <Include href="wombat.xml" loadImmediate="false" itemID="584f5336-00000010" lastModified="1481595039"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="npm-wombat-typing.svg" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="29" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
+                                   <tweens>
+                                        <CustomEase target="all">
+                                             <Point/>
+                                             <Point x="0.4828"/>
+                                             <Point x="0.4828" y="1"/>
+                                             <Point x="1" y="1"/>
+                                        </CustomEase>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="wombat" selected="true" centerPoint3DX="540.05" centerPoint3DY="360">
+                                             <matrix>
+                                                  <Matrix a="0.5" d="0.5" tx="540" ty="360"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="0.1"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="29" duration="30" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
+                                   <tweens>
+                                        <CustomEase target="all">
+                                             <Point/>
+                                             <Point x="0.5"/>
+                                             <Point x="0.5" y="1"/>
+                                             <Point x="1" y="1"/>
+                                        </CustomEase>
+                                   </tweens>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="wombat" centerPoint3DX="540.05" centerPoint3DY="380">
+                                             <matrix>
+                                                  <Matrix a="0.5" d="0.5" tx="540" ty="380"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="0.1"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="59" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="wombat" centerPoint3DX="540.05" centerPoint3DY="360">
+                                             <matrix>
+                                                  <Matrix a="0.5" d="0.5" tx="540" ty="360"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="0.1"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <persistentData>
+          <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;true"/>
+     </persistentData>
+     <PrinterSettings platform="macintosh"/>
+     <publishHistory/>
+</DOMDocument>
