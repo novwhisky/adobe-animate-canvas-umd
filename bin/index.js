@@ -10,7 +10,7 @@ var moduleNamespace = argv['module-name'] || path.parse(inFile).name;
 
 function Animate2UMD(exportJS) {
   var replaceToken = '/**REPLACE**/';
-  var moduleExport = exportJS+ '\n' + 'exports["' + moduleNamespace + '"] = lib';
+  var moduleExport = exportJS+ '\n' + 'exports["' + moduleNamespace + '"] = lib;';
   return template.toString().replace(replaceToken, moduleExport)  + '\n';
 }
 
