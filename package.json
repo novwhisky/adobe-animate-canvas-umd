@@ -1,6 +1,10 @@
 {
   "name": "adobe-animate-canvas-umd",
   "version": "1.0.0",
+  "dependencies": {
+    "easeljs": "0.0.0",
+    "tweenjs": "0.0.0"
+  },
   "description": "A utility for wrapping Adobe Animate HTML5 canvas exports in modern web modules",
   "main": "index.js",
   "scripts": {
