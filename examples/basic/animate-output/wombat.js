@@ -151,7 +151,7 @@ p.nominalBounds = new cjs.Rectangle(-481.2,-318.8,962.5,637.6);
 p.nominalBounds = new cjs.Rectangle(-481.2,-318.8,962.5,637.6);
 
 
-(lib.wombat = function(mode,startPosition,loop) {
+(lib.wombat_1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// laptop
@@ -338,15 +338,15 @@ p.nominalBounds = new cjs.Rectangle(-481.2,-318.8,962.5,637.6);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_38},{t:this.shape_37},{t:this.shape_36},{t:this.shape_35},{t:this.shape_34},{t:this.shape_33},{t:this.shape_32},{t:this.shape_31},{t:this.shape_30},{t:this.shape_29},{t:this.shape_28},{t:this.shape_27},{t:this.shape_26},{t:this.shape_25},{t:this.shape_24},{t:this.shape_23},{t:this.shape_22},{t:this.shape_21},{t:this.shape_20},{t:this.shape_19},{t:this.shape_18},{t:this.shape_17},{t:this.shape_16},{t:this.shape_15},{t:this.shape_14},{t:this.shape_13},{t:this.shape_12},{t:this.shape_11},{t:this.shape_10},{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4}]}).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.wombat, new cjs.Rectangle(-484.4,-506.1,962.5,1012.2), null);
+}).prototype = getMCSymbolPrototype(lib.wombat_1, new cjs.Rectangle(-484.4,-506.1,962.5,1012.2), null);
 
 
 // stage content:
-(lib.basic = function(mode,startPosition,loop) {
+(lib.wombat = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// npm-wombat-typing.svg
-	this.instance = new lib.wombat();
+	this.instance = new lib.wombat_1();
 	this.instance.parent = this;
 	this.instance.setTransform(540.1,360,0.5,0.5,0,0,0,0.1,0);
 
