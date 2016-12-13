@@ -20,7 +20,7 @@
     "html5",
     "canvas",
     "umd",
-    "createjs",
+    "createjs"
   ],
   "author": "Nathan Witt <wittnl@gmail.com> (http://wi.tt/)",
   "license": "MIT",
