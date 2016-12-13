@@ -355,7 +355,7 @@ p.nominalBounds = new cjs.Rectangle(-481.2,-318.8,962.5,637.6);
 
 // stage content:
 (lib.wombat = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+	this.initialize(mode,startPosition,loop,{On:0,Off:29});
 
 	// npm-wombat-typing.svg
 	this.instance = new lib.wombat_1();

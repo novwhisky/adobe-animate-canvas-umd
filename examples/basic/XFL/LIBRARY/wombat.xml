@@ -11,9 +11,9 @@
               <elements>
                 <DOMGroup>
                   <members>
-                    <DOMGroup selected="true">
+                    <DOMGroup>
                       <members>
-                        <DOMShape selected="true" isDrawingObject="true">
+                        <DOMShape isDrawingObject="true">
                           <matrix>
                             <Matrix tx="-384.55" ty="-506.1"/>
                           </matrix>
@@ -32,7 +32,7 @@
                             <Edge cubics="!13032 19924(;13032,19924 2372,19924 2372,19924q13032 19924 2372 19924);"/>
                           </edges>
                         </DOMShape>
-                        <DOMShape selected="true" isDrawingObject="true">
+                        <DOMShape isDrawingObject="true">
                           <matrix>
                             <Matrix tx="-384.55" ty="-506.1"/>
                           </matrix>
@@ -49,7 +49,7 @@
                             <Edge cubics="!2912 20244(;2912,20244 2912,19824 2912,19824p2912 20244q2912 19824);"/>
                           </edges>
                         </DOMShape>
-                        <DOMSymbolInstance libraryItemName="npm-wombat-typing.svg Assets/Layer 1/&amp;#060Path&amp;#062" selected="true">
+                        <DOMSymbolInstance libraryItemName="npm-wombat-typing.svg Assets/Layer 1/&amp;#060Path&amp;#062">
                           <matrix>
                             <Matrix tx="-265.95" ty="485.1"/>
                           </matrix>
@@ -62,9 +62,9 @@
                         </DOMSymbolInstance>
                       </members>
                     </DOMGroup>
-                    <DOMGroup selected="true">
+                    <DOMGroup>
                       <members>
-                        <DOMShape selected="true" isDrawingObject="true">
+                        <DOMShape isDrawingObject="true">
                           <matrix>
                             <Matrix tx="-384.55" ty="-506.1"/>
                           </matrix>
@@ -89,9 +89,9 @@
                             <Edge cubics="!13550 15397(;13550,15395 13550,15394 13550,15391p13550 15397q13550 15391);"/>
                           </edges>
                         </DOMShape>
-                        <DOMGroup selected="true">
+                        <DOMGroup>
                           <members>
-                            <DOMSymbolInstance libraryItemName="npm-wombat-typing.svg Assets/Layer 1/Logo_1" selected="true">
+                            <DOMSymbolInstance libraryItemName="npm-wombat-typing.svg Assets/Layer 1/Logo_1">
                               <matrix>
                                 <Matrix tx="-68" ty="368.05"/>
                               </matrix>
@@ -102,7 +102,7 @@
                                 <Color alphaMultiplier="0.1015625"/>
                               </color>
                             </DOMSymbolInstance>
-                            <DOMShape selected="true" isDrawingObject="true">
+                            <DOMShape isDrawingObject="true">
                               <matrix>
                                 <Matrix tx="-384.55" ty="-506.1"/>
                               </matrix>
@@ -159,7 +159,7 @@
                             </DOMShape>
                           </members>
                         </DOMGroup>
-                        <DOMSymbolInstance libraryItemName="npm-wombat-typing.svg Assets/Layer 1/&amp;#060Path&amp;#062_0" selected="true">
+                        <DOMSymbolInstance libraryItemName="npm-wombat-typing.svg Assets/Layer 1/&amp;#060Path&amp;#062_0">
                           <matrix>
                             <Matrix tx="-292.8" ty="264.1"/>
                           </matrix>
@@ -199,31 +199,16 @@
             <DOMFrame index="0" keyMode="9728">
               <elements>
                 <DOMGroup>
-                  <matrix>
-                    <Matrix tx="-384.55" ty="-506.1"/>
-                  </matrix>
                   <members>
-                    <DOMGroup selected="true">
-                      <matrix>
-                        <Matrix tx="-384.55" ty="-506.1"/>
-                      </matrix>
+                    <DOMGroup>
                       <members>
-                        <DOMGroup selected="true">
-                          <matrix>
-                            <Matrix tx="-384.55" ty="-506.1"/>
-                          </matrix>
+                        <DOMGroup>
                           <members>
-                            <DOMGroup selected="true">
-                              <matrix>
-                                <Matrix tx="-384.55" ty="-506.1"/>
-                              </matrix>
+                            <DOMGroup>
                               <members>
-                                <DOMGroup selected="true">
-                                  <matrix>
-                                    <Matrix tx="-384.55" ty="-506.1"/>
-                                  </matrix>
+                                <DOMGroup>
                                   <members>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -245,12 +230,9 @@
                                         <Edge cubics="!14683 17979(;14683,17979 14682,15261 13593,12992q14683 17979Q14683 17300q14546 16336Q14274 14410q13593 12992);"/>
                                       </edges>
                                     </DOMShape>
-                                    <DOMGroup selected="true">
-                                      <matrix>
-                                        <Matrix tx="-384.55" ty="-506.1"/>
-                                      </matrix>
+                                    <DOMGroup>
                                       <members>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -274,7 +256,7 @@
                                             <Edge cubics="!655 17954(;655,17954 655,17979 655,17979q655 17954 655 17979);"/>
                                           </edges>
                                         </DOMShape>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -302,12 +284,9 @@
                                     </DOMGroup>
                                   </members>
                                 </DOMGroup>
-                                <DOMGroup selected="true">
-                                  <matrix>
-                                    <Matrix tx="-384.55" ty="-506.1"/>
-                                  </matrix>
+                                <DOMGroup>
                                   <members>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -328,12 +307,9 @@
                                         <Edge cubics="!14560 16435(;13249,15192 10655,14345 7669,14345q14560 16435Q13560 15487q11743 14924Q9873 14345q7669 14345);"/>
                                       </edges>
                                     </DOMShape>
-                                    <DOMGroup selected="true">
-                                      <matrix>
-                                        <Matrix tx="-384.55" ty="-506.1"/>
-                                      </matrix>
+                                    <DOMGroup>
                                       <members>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -352,7 +328,7 @@
                                             <Edge cubics="!655 17979(;1438,18508 2469,18877 3499,19133q655 17979Q1702 18686q3499 19133);"/>
                                           </edges>
                                         </DOMShape>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -378,17 +354,11 @@
                                 </DOMGroup>
                               </members>
                             </DOMGroup>
-                            <DOMGroup selected="true">
-                              <matrix>
-                                <Matrix tx="-384.55" ty="-506.1"/>
-                              </matrix>
+                            <DOMGroup>
                               <members>
-                                <DOMGroup selected="true">
-                                  <matrix>
-                                    <Matrix tx="-384.55" ty="-506.1"/>
-                                  </matrix>
+                                <DOMGroup>
                                   <members>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -409,12 +379,9 @@
                                         <Edge cubics="!5268 19478(;5803,19087 5202,17027 4745,16214q5268 19478Q5457 19340q5476 18917Q5493 18546q5379 18004Q5276 17518q5095 17012Q4921 16528q4745 16214);"/>
                                       </edges>
                                     </DOMShape>
-                                    <DOMGroup selected="true">
-                                      <matrix>
-                                        <Matrix tx="-384.55" ty="-506.1"/>
-                                      </matrix>
+                                    <DOMGroup>
                                       <members>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -434,7 +401,7 @@
                                             <Edge cubics="!2557 19392(;2537,19379 2516,19367 2495,19354p2557 19392q2495 19354);"/>
                                           </edges>
                                         </DOMShape>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -455,12 +422,9 @@
                                         </DOMShape>
                                       </members>
                                     </DOMGroup>
-                                    <DOMGroup selected="true">
-                                      <matrix>
-                                        <Matrix tx="-384.55" ty="-506.1"/>
-                                      </matrix>
+                                    <DOMGroup>
                                       <members>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -479,7 +443,7 @@
                                             <Edge cubics="!2766 18252(;3007,18671 2900,19185 2526,19400q2766 18252Q2947 18566q2877 18903Q2806 19239q2526 19400);"/>
                                           </edges>
                                         </DOMShape>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -502,12 +466,9 @@
                                     </DOMGroup>
                                   </members>
                                 </DOMGroup>
-                                <DOMGroup selected="true">
-                                  <matrix>
-                                    <Matrix tx="-384.55" ty="-506.1"/>
-                                  </matrix>
+                                <DOMGroup>
                                   <members>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -528,12 +489,9 @@
                                         <Edge cubics="!10114 19478(;9579,19087 10180,17027 10638,16214q10114 19478Q9925 19340q9906 18917Q9889 18546q10004 18004Q10107 17517q10288 17012Q10461 16528q10638 16214);"/>
                                       </edges>
                                     </DOMShape>
-                                    <DOMGroup selected="true">
-                                      <matrix>
-                                        <Matrix tx="-384.55" ty="-506.1"/>
-                                      </matrix>
+                                    <DOMGroup>
                                       <members>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -553,7 +511,7 @@
                                             <Edge cubics="!12825 19392(;12846,19379 12866,19367 12887,19354p12825 19392q12887 19354);"/>
                                           </edges>
                                         </DOMShape>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -574,12 +532,9 @@
                                         </DOMShape>
                                       </members>
                                     </DOMGroup>
-                                    <DOMGroup selected="true">
-                                      <matrix>
-                                        <Matrix tx="-384.55" ty="-506.1"/>
-                                      </matrix>
+                                    <DOMGroup>
                                       <members>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -598,7 +553,7 @@
                                             <Edge cubics="!12618 18252(;12859,17834 13358,17670 13732,17886q12618 18252Q12799 17939q13125 17831Q13452 17724q13732 17886);"/>
                                           </edges>
                                         </DOMShape>
-                                        <DOMShape selected="true" isDrawingObject="true">
+                                        <DOMShape isDrawingObject="true">
                                           <matrix>
                                             <Matrix tx="-384.55" ty="-506.1"/>
                                           </matrix>
@@ -625,17 +580,11 @@
                             </DOMGroup>
                           </members>
                         </DOMGroup>
-                        <DOMGroup selected="true">
-                          <matrix>
-                            <Matrix tx="-384.55" ty="-506.1"/>
-                          </matrix>
+                        <DOMGroup>
                           <members>
-                            <DOMGroup selected="true">
-                              <matrix>
-                                <Matrix tx="-384.55" ty="-506.1"/>
-                              </matrix>
+                            <DOMGroup>
                               <members>
-                                <DOMShape selected="true" isDrawingObject="true">
+                                <DOMShape isDrawingObject="true">
                                   <matrix>
                                     <Matrix tx="-384.55" ty="-506.1"/>
                                   </matrix>
@@ -675,7 +624,7 @@
                                     <Edge cubics="!1669 13156(;1669,13156 1592,13331 1592,13331q1669 13156 1592 13331);"/>
                                   </edges>
                                 </DOMShape>
-                                <DOMShape selected="true" isDrawingObject="true">
+                                <DOMShape isDrawingObject="true">
                                   <matrix>
                                     <Matrix tx="-384.55" ty="-506.1"/>
                                   </matrix>
@@ -697,12 +646,9 @@
                                 </DOMShape>
                               </members>
                             </DOMGroup>
-                            <DOMGroup selected="true">
-                              <matrix>
-                                <Matrix tx="-384.55" ty="-506.1"/>
-                              </matrix>
+                            <DOMGroup>
                               <members>
-                                <DOMShape selected="true" isDrawingObject="true">
+                                <DOMShape isDrawingObject="true">
                                   <matrix>
                                     <Matrix tx="-384.55" ty="-506.1"/>
                                   </matrix>
@@ -744,7 +690,7 @@
                                     <Edge cubics="!12592 11426(;12592,11426 12826,11727 12826,11727q12592 11426 12826 11727);"/>
                                   </edges>
                                 </DOMShape>
-                                <DOMShape selected="true" isDrawingObject="true">
+                                <DOMShape isDrawingObject="true">
                                   <matrix>
                                     <Matrix tx="-384.55" ty="-506.1"/>
                                   </matrix>
@@ -768,7 +714,7 @@
                             </DOMGroup>
                           </members>
                         </DOMGroup>
-                        <DOMShape selected="true" isDrawingObject="true">
+                        <DOMShape isDrawingObject="true">
                           <matrix>
                             <Matrix tx="-384.55" ty="-506.1"/>
                           </matrix>
@@ -789,22 +735,13 @@
                         </DOMShape>
                       </members>
                     </DOMGroup>
-                    <DOMGroup selected="true">
-                      <matrix>
-                        <Matrix tx="-384.55" ty="-506.1"/>
-                      </matrix>
+                    <DOMGroup>
                       <members>
-                        <DOMGroup selected="true">
-                          <matrix>
-                            <Matrix tx="-384.55" ty="-506.1"/>
-                          </matrix>
+                        <DOMGroup>
                           <members>
-                            <DOMGroup selected="true">
-                              <matrix>
-                                <Matrix tx="-384.55" ty="-506.1"/>
-                              </matrix>
+                            <DOMGroup>
                               <members>
-                                <DOMShape selected="true" isDrawingObject="true">
+                                <DOMShape isDrawingObject="true">
                                   <matrix>
                                     <Matrix tx="-384.55" ty="-506.1"/>
                                   </matrix>
@@ -822,7 +759,7 @@
                                     <Edge cubics="!12344 2214(;12344,2214 12140,985 11472,30q12344 2214Q12293 1907q12159 1480Q11890 627q11472 30);"/>
                                   </edges>
                                 </DOMShape>
-                                <DOMShape selected="true" isDrawingObject="true">
+                                <DOMShape isDrawingObject="true">
                                   <matrix>
                                     <Matrix tx="-384.55" ty="-506.1"/>
                                   </matrix>
@@ -842,12 +779,9 @@
                                 </DOMShape>
                               </members>
                             </DOMGroup>
-                            <DOMGroup selected="true">
-                              <matrix>
-                                <Matrix tx="-384.55" ty="-506.1"/>
-                              </matrix>
+                            <DOMGroup>
                               <members>
-                                <DOMShape selected="true" isDrawingObject="true">
+                                <DOMShape isDrawingObject="true">
                                   <matrix>
                                     <Matrix tx="-384.55" ty="-506.1"/>
                                   </matrix>
@@ -865,7 +799,7 @@
                                     <Edge cubics="!2994 2214(;2994,2214 3198,985 3865,30q2994 2214Q3045 1907q3179 1480Q3448 627q3865 30);"/>
                                   </edges>
                                 </DOMShape>
-                                <DOMShape selected="true" isDrawingObject="true">
+                                <DOMShape isDrawingObject="true">
                                   <matrix>
                                     <Matrix tx="-384.55" ty="-506.1"/>
                                   </matrix>
@@ -887,7 +821,7 @@
                             </DOMGroup>
                           </members>
                         </DOMGroup>
-                        <DOMShape selected="true" isDrawingObject="true">
+                        <DOMShape isDrawingObject="true">
                           <matrix>
                             <Matrix tx="-384.55" ty="-506.1"/>
                           </matrix>
@@ -909,12 +843,9 @@
                             <Edge cubics="!15318 10704(;15318,10704 15317,7486 14130,4801q15318 10704Q15318 9900q15169 8759Q14872 6479q14130 4801);"/>
                           </edges>
                         </DOMShape>
-                        <DOMGroup selected="true">
-                          <matrix>
-                            <Matrix tx="-384.55" ty="-506.1"/>
-                          </matrix>
+                        <DOMGroup>
                           <members>
-                            <DOMShape selected="true" isDrawingObject="true">
+                            <DOMShape isDrawingObject="true">
                               <matrix>
                                 <Matrix tx="-384.55" ty="-506.1"/>
                               </matrix>
@@ -933,7 +864,7 @@
                                 <Edge cubics="!5418 12347(;5418,11746 6426,11258 7669,11258q5418 12347Q5418 12126q5595 11923Q5766 11728q6077 11577Q6737 11258q7669 11258);"/>
                               </edges>
                             </DOMShape>
-                            <DOMShape selected="true" isDrawingObject="true">
+                            <DOMShape isDrawingObject="true">
                               <matrix>
                                 <Matrix tx="-384.55" ty="-506.1"/>
                               </matrix>
@@ -954,22 +885,13 @@
                             </DOMShape>
                           </members>
                         </DOMGroup>
-                        <DOMGroup selected="true">
-                          <matrix>
-                            <Matrix tx="-384.55" ty="-506.1"/>
-                          </matrix>
+                        <DOMGroup>
                           <members>
-                            <DOMGroup selected="true">
-                              <matrix>
-                                <Matrix tx="-384.55" ty="-506.1"/>
-                              </matrix>
+                            <DOMGroup>
                               <members>
-                                <DOMGroup selected="true">
-                                  <matrix>
-                                    <Matrix tx="-384.55" ty="-506.1"/>
-                                  </matrix>
+                                <DOMGroup>
                                   <members>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -988,7 +910,7 @@
                                         <Edge cubics="!4909 10470(;5180,10470 5399,10690 5399,10960q4909 10470Q5112 10470q5256 10614Q5399 10757q5399 10960);"/>
                                       </edges>
                                     </DOMShape>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -1007,7 +929,7 @@
                                         <Edge cubics="!4636 11050(;4636,10847 4800,10683 5002,10683q4636 11050Q4636 10898q4743 10790Q4850 10683q5002 10683);"/>
                                       </edges>
                                     </DOMShape>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -1028,12 +950,9 @@
                                     </DOMShape>
                                   </members>
                                 </DOMGroup>
-                                <DOMGroup selected="true">
-                                  <matrix>
-                                    <Matrix tx="-384.55" ty="-506.1"/>
-                                  </matrix>
+                                <DOMGroup>
                                   <members>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -1052,7 +971,7 @@
                                         <Edge cubics="!10452 10470(;10181,10470 9962,10690 9962,10960q10452 10470Q10249 10470q10105 10614Q9962 10757q9962 10960);"/>
                                       </edges>
                                     </DOMShape>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -1071,7 +990,7 @@
                                         <Edge cubics="!9992 11050(;9992,10847 10156,10683 10359,10683q9992 11050Q9992 10898q10099 10790Q10207 10683q10359 10683);"/>
                                       </edges>
                                     </DOMShape>
-                                    <DOMShape selected="true" isDrawingObject="true">
+                                    <DOMShape isDrawingObject="true">
                                       <matrix>
                                         <Matrix tx="-384.55" ty="-506.1"/>
                                       </matrix>
@@ -1096,7 +1015,7 @@
                             </DOMGroup>
                           </members>
                         </DOMGroup>
-                        <DOMShape selected="true" isDrawingObject="true">
+                        <DOMShape isDrawingObject="true">
                           <matrix>
                             <Matrix tx="-384.55" ty="-506.1"/>
                           </matrix>

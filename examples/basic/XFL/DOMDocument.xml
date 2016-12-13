@@ -12,9 +12,22 @@
           <Include href="wombat.xml" loadImmediate="false" itemID="584f5336-00000010" lastModified="1481595039"/>
      </symbols>
      <timelines>
-          <DOMTimeline name="Scene 1">
+          <DOMTimeline name="Scene 1" currentFrame="59">
                <layers>
-                    <DOMLayer name="npm-wombat-typing.svg" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="29" name="On" labelType="name" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="29" duration="30" name="Off" labelType="name" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="59" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="npm-wombat-typing.svg" color="#4F80FF" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" duration="29" tweenType="motion" motionTweenSnap="true" hasCustomEase="true" keyMode="22017">
                                    <tweens>
@@ -26,7 +39,7 @@
                                         </CustomEase>
                                    </tweens>
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="wombat" selected="true" centerPoint3DX="540.05" centerPoint3DY="360">
+                                        <DOMSymbolInstance libraryItemName="wombat" centerPoint3DX="540.05" centerPoint3DY="360">
                                              <matrix>
                                                   <Matrix a="0.5" d="0.5" tx="540" ty="360"/>
                                              </matrix>
