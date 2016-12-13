@@ -1,15 +1,15 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['exports', 'createjs-tweenjs', 'createjs-easeljs'], factory);
+    define(['exports'], factory);
   } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
     // CommonJS
-    factory(exports, require('createjs-tweenjs'), require('createjs-easeljs'));
+    factory(exports);
   } else {
     // Browser globals
-    factory((root.commonJsStrict = {}), root['createjs-tweenjs'], root['createjs-easeljs']);
+    factory((root.commonJsStrict = {}));
   }
-}(this, function (exports, createjs, nope) {
+}(this, function (exports) {
   (function (lib, img, cjs, ss, an) {
 
 var p; // shortcut to reference prototypes
@@ -382,6 +382,10 @@ lib.properties = {
 
 
 })(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{}, AdobeAn = AdobeAn||{});
-var lib, images, createjs, ss, AdobeAn;
-exports["wombat"] = lib
+//// "var createjs" filtered out by canvas-umd to allow encapsulated interop
+var lib, images, ss, AdobeAn;
+
+	//// Animate export wrapped by canvas-umd
+	exports["lib"] = lib;
+	exports["createInstance"] = function() { return new lib["wombat"](); };
 }));

@@ -1,14 +1,14 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['exports', 'createjs-tweenjs', 'createjs-easeljs'], factory);
+    define(['exports'], factory);
   } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
     // CommonJS
-    factory(exports, require('createjs-tweenjs'), require('createjs-easeljs'));
+    factory(exports);
   } else {
     // Browser globals
-    factory((root.commonJsStrict = {}), root['createjs-tweenjs'], root['createjs-easeljs']);
+    factory((root.commonJsStrict = {}));
   }
-}(this, function (exports, createjs, nope) {
+}(this, function (exports) {
   /**REPLACE**/
 }));

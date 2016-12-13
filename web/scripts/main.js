@@ -1,17 +1,26 @@
 require.config({
-  baseUrl: '/',
-  paths: {
-    'createjs-easeljs': 'node_modules/createjs-easeljs/lib/easeljs-0.8.2.combined',
-    'createjs-tweenjs': 'node_modules/createjs-tweenjs/lib/tweenjs-0.6.0.combined'
-  },
-
-  shim: {
-    'createjs-easeljs': { exports: 'createjs' },
-    'createjs-tweenjs': { exports: 'createjs' }
-  }
+  baseUrl: '/'
 });
 
-require(['web/scripts/umds/wombat.umd'], function(wombat) {
-  console.log(wombat);
+function startCanvas(exportRoot, lib) {
+  var canvas, stage, anim_container, dom_overlay_container, fnStartAnimation;
+  canvas = document.getElementById("canvas");
+  anim_container = document.getElementById("animation_container");
+  dom_overlay_container = document.getElementById("dom_overlay_container");
 
+
+  stage = new createjs.Stage(canvas);
+  stage.addChild(exportRoot);
+  //Registers the "tick" event listener.
+  fnStartAnimation = function() {
+    createjs.Ticker.setFPS(lib.properties.fps);
+    createjs.Ticker.addEventListener("tick", stage);
+  }
+  fnStartAnimation();
+
+}
+
+require(['web/scripts/umds/wombat.umd'], function(wombat) {
+  var exportRoot = new wombat.createInstance();
+  startCanvas(exportRoot, wombat.lib);
 });

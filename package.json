@@ -2,9 +2,8 @@
   "name": "adobe-animate-canvas-umd",
   "version": "1.0.0",
   "dependencies": {
-    "createjs-easeljs": "^0.8.2",
-    "createjs-tweenjs": "^0.6.0",
-    "minimist": "^1.2.0",
+    "CreateJS": "github:createjs/Combined",
+    "minimist": "^1.2.0"
   },
   "description": "A utility for wrapping Adobe Animate HTML5 canvas exports in modern web modules",
   "main": "index.js",
@@ -22,7 +21,6 @@
     "canvas",
     "umd",
     "createjs",
-    "tweenjs"
   ],
   "author": "Nathan Witt <wittnl@gmail.com> (http://wi.tt/)",
   "license": "MIT",
