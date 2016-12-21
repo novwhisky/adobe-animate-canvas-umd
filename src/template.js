@@ -10,5 +10,5 @@
     factory((root.commonJsStrict = {}));
   }
 }(this, function (exports) {
-  /**REPLACE**/
+  {{REPLACE}}
 }));

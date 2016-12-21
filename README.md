@@ -6,6 +6,7 @@ Wraps [Adobe Animate](https://www.adobe.com/products/animate.html) HTML5 canvas 
 
 `canvas-umd [options] /path/to/input-file.js > /path/to/ouput-file.umd.js`
 
-### CLI options
+### Options
 
 * `--module-name` - Override output module namespace. Without it, module name will be inherited by input filename by default.
+* `--parse-labels` - *Experimental* Parse out top-level frame labels and add them to `lib.properties` for static evaluation.
