@@ -3,6 +3,7 @@ require.config({
 });
 
 require(['dist/bundle'], function(umdLib) {
+
     var canvasUmd = umdLib.default;
     var fileSelect = document.querySelector('input[type="file"]');
     var pre = document.querySelector('pre');
@@ -16,8 +17,13 @@ require(['dist/bundle'], function(umdLib) {
     }
 
     function convertFile(fileObject) {
+        var umdConfig = {
+            'module-name': fileObject.name,
+            'parse-labels': true
+        };
+
         readFile(fileObject, function(fileContents) {
-            var umd = canvasUmd({ 'module-name': fileObject.name }).convert(fileContents);
+            var umd = canvasUmd(umdConfig).convert(fileContents);
             pre.textContent = umd;
         });
     }

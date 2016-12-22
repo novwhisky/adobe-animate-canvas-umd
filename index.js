@@ -1,3 +1,5 @@
+// var createjs = require('exports?createjs!createjs');
+
 function CanvasUmd(options) {
   if(!(this instanceof CanvasUmd))
     return new CanvasUmd(options);
@@ -42,7 +44,18 @@ CanvasUmd.prototype = {
     var wrappedModule = exportJS + '\n\n' + moduleExport;
     return this.template.replace(replaceToken, wrappedModule)  + '\n';
   },
+
+  getFrameLabels: function(inputStr) {
+    var wrap = '(function(){' + inputStr + '})(window)';
+    var def = new Function(wrap);
+
+    // def();
+  },
+
   convert: function(inputStr) {
+    if(this.options['parse-labels']) {
+      this.getFrameLabels(inputStr);
+    }
     var sanitized = this.removeCreateJSVar(inputStr);
     var umd = this.Animate2UMD(sanitized);
     return umd;
