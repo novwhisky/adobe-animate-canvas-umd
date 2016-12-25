@@ -25,6 +25,8 @@ function CanvasUmd(options) {
   "}(this, function (exports) {\n" +
   "\t{{REPLACE}}\n" +
   "}));";
+
+
 }
 
 CanvasUmd.prototype = {
