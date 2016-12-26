@@ -21,6 +21,6 @@ function startCanvas(exportRoot, lib) {
 }
 
 require(['web/scripts/umds/wombat.umd'], function(wombat) {
-  var exportRoot = new wombat.createInstance();
+  var exportRoot = new wombat.lib.wombat();
   startCanvas(exportRoot, wombat.lib);
 });
