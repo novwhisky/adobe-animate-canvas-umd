@@ -1,4 +1,4 @@
-// var createjs = require('exports?createjs!createjs');
+ var createjs = require('imports?this=>window!createjs');
 
 function CanvasUmd(options) {
   if(!(this instanceof CanvasUmd))
