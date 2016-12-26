@@ -33,15 +33,21 @@ CanvasUmd.prototype = {
   removeCreateJSVar: function removeCreateJSVar(exportJS) {
     var lines = exportJS.toString().split('\n');
     var noGoodVeryBadGlobals = lines.pop().replace(/(,\s+)?createjs/, '');
-    lines.push('//// "var createjs" filtered out by canvas-umd to allow encapsulated interop', noGoodVeryBadGlobals);
+    lines.push('//// var "createjs" filtered out by canvas-umd to allow encapsulated interop', noGoodVeryBadGlobals);
     return lines.join('\n');
   },
 
+  getExportedVars: function getExportedVars(exportJS) {
+    var lines = exportJS.split('\n');
+    var varList = lines.pop().replace(/(var\s|[,;])/g, '').split(/\s/);
+    return varList
+  },
+
   Animate2UMD: function Animate2UMD(exportJS) {
+    var exportVars = this.getExportedVars(exportJS);
     var replaceToken = '{{REPLACE}}';
     var moduleExport = '\t//// Animate export wrapped by canvas-umd\n'+
-      '\texports["lib"] = exports["default"] = lib;\n' +
-      '\texports["createInstance"] = function() { return new lib["'+this.options['module-name']+'"](); };';
+        exportVars.reduce(function(acc, val) { return acc + '\texports["' + val + '"] = ' + val + ';\n'; }, '');
 
     var wrappedModule = exportJS + '\n\n' + moduleExport;
     return this.template.replace(replaceToken, wrappedModule)  + '\n';
