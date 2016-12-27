@@ -394,5 +394,6 @@
 	exports["images"] = images;
 	exports["ss"] = ss;
 	exports["AdobeAn"] = AdobeAn;
+	exports["default"] = exports["construct"] = lib["wombat"];
 
 }));

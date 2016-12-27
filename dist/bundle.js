@@ -148,7 +148,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      '\t'+ exportVars[0] + '.properties["frameLabels"] = ' + JSON.stringify(frameLabels) + ';\n';
 
 	    var moduleExport = '\t//// Animate export wrapped by canvas-umd\n'+
-	        exportVars.reduce(function(acc, val) { return acc + '\texports["' + val + '"] = ' + val + ';\n'; }, '');
+	        exportVars.reduce(function(acc, val) { return acc + '\texports["' + val + '"] = ' + val + ';\n'; }, '') +
+	        '\texports["default"] = exports["construct"] = ' + exportVars[0] + '["'+this.options['module-name']+'"];\n';
 
 	    // Done massaging data points, now put all the pieces together
 	    var wrappedModule = exportJS + '\n\n' + frameExport + '\n\n' + moduleExport;
