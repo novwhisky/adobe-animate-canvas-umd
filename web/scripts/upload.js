@@ -17,8 +17,9 @@ require(['dist/bundle'], function(umdLib) {
     }
 
     function convertFile(fileObject) {
+        var fileName = fileObject.name.match(/([\.\-\w]+)\.\w+?$/)[1];
         var umdConfig = {
-            'module-name': fileObject.name,
+            'module-name': fileName,
             'parse-labels': true
         };
 
