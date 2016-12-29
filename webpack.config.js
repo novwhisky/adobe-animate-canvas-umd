@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
     entry: './index.js',
     output: {
@@ -10,5 +12,7 @@ module.exports = {
             createjs: 'CreateJS/builds/createjs-2015.11.26.combined'
         }
     },
-    module: {}
+    externals: {
+        'createjs': 'createjs'
+    }
 };

@@ -1,4 +1,4 @@
-var createjs = require('imports?this=>window!createjs');
+require('createjs');
 
 /**
  * CanvasUmd object that manages export conversion
