@@ -4,13 +4,10 @@ Wraps [Adobe Animate](https://www.adobe.com/products/animate.html) HTML5 canvas 
 
 ### Usage
 
-**CLI**
-`canvas-umd [options] /path/to/input-file.js > /path/to/ouput-file.umd.js`
-
-**API**
+**This library only works in a browser environment currently, CanvasRenderingContext2D support in node sucks**
 ```
 var umd = CanvasUmd({ 
-    'module-name': 'myModule'
+    'module-name': 'my-module'
     'parse-labels': true
 }).convert(AnimateJS);
 ```
