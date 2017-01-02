@@ -5,6 +5,7 @@ require.config({
     }
 });
 
+/*
 function startCanvas(exportRoot, lib) {
     var canvas, stage, anim_container, dom_overlay_container, fnStartAnimation;
     canvas = document.getElementById("canvas");
@@ -20,9 +21,10 @@ function startCanvas(exportRoot, lib) {
     };
     fnStartAnimation();
 }
+*/
 
 
-require(['dist/bundle'], function(umdLib) {
+require(['dist/canvas-umd'], function(umdLib) {
 
     var canvasUmd = umdLib.default;
     var fileSelect = document.querySelector('input[type="file"]');
