@@ -2,6 +2,10 @@
 
 Wraps [Adobe Animate](https://www.adobe.com/products/animate.html) HTML5 canvas export files in [UMD](https://github.com/umdjs/umd) for use in modern JavaScript module ecosystems
 
+### Conversion example
+
+Give it a try at [wittnl.github.io/canvas-umd](//wittnl.github.io/canvas-umd/)
+
 ### Usage
 
 **This library only works in a browser environment currently, CanvasRenderingContext2D support in node sucks**
