@@ -1,11 +1,11 @@
 require.config({
     baseUrl: '/',
     paths: {
-        createjs: '../../node_modules/CreateJS/builds/createjs-2015.11.26.combined'
+        createjs: 'scripts/vendor/createjs-2015.11.26.combined'
     }
 });
 
-require(['dist/canvas-umd', 'web/scripts/iframe-previewer'], function(umdLib, iframeUtil) {
+require(['scripts/vendor/canvas-umd', 'scripts/iframe-previewer'], function(umdLib, iframeUtil) {
     var canvasUmd = umdLib.default;
     var fileSelect = document.querySelector('input[type="file"]');
     var source = document.querySelector('textarea');
