@@ -7,7 +7,7 @@ define([], function() {
   function buildIframe() {
     iframe = document.createElement('iframe');
     iframe.id = 'iframePreview';
-    iframe.src = 'index.html';
+    iframe.src = 'preview.html';
     iframe.frameBorder = 'none';
     iframe.scolling = 'no';
     document.body.appendChild(iframe);
