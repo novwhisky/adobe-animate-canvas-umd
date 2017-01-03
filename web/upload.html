@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style type="text/css">
+        body {margin: 0; padding: 0}
+
+        #preOverlay textarea.hide { display: none; }
+
+        #preOverlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            background: #E1E1E1;
+            padding: 0 1em;
+        }
+
+        #ui {
+            padding: 1em;
+        }
+
+        #preOverlay textarea {
+            border: 3px dashed #666666;
+            font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 14px;
+            width: 100%;
+            height: 200px;
+        }
+    </style>
     <script data-main="/web/scripts/upload.js" src="/node_modules/requirejs/require.js"></script>
 </head>
 <body>
-    <form action="" name="uploader">
-        <input name="file" type="file" />
-        <!--<p><input type="Submit" value="Upload"></p>-->
-    </form>
-<!--<div id="animation_container" style="background-color:rgba(204, 204, 204, 1.00); width:1080px; height:720px">-->
-    <!--<canvas id="canvas" width="1080" height="720" style="position: absolute; display: block; background-color:rgba(204, 204, 204, 1.00);"></canvas>-->
-    <!--<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1080px; height:720px; position: absolute; left: 0px; top: 0px; display: block;">-->
-    <!--</div>-->
-<!--</div>-->
-    <h3>Output</h3>
-    <pre style="overflow: scroll;"></pre>
+    <div id="ui">
+        <div id="preOverlay">
+            <p><button id="togglePre">UMD output</button></p>
+            <p><textarea class="hide" readonly></textarea></p>
+        </div>
+        <form action="" name="uploader">
+            <input name="file" type="file" />
+        </form>
+    </div>
 </body>
 </html>
