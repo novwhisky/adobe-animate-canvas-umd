@@ -6,7 +6,7 @@
     "minimist": "^1.2.0"
   },
   "description": "A utility for wrapping Adobe Animate HTML5 canvas exports in modern web modules",
-  "main": "index.js",
+  "main": "dist/canvas-umd.js",
   "bin": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
