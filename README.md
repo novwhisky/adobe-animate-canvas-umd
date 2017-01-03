@@ -8,6 +8,8 @@ Give it a try at [wittnl.github.io/canvas-umd](//wittnl.github.io/canvas-umd/)
 
 ### Usage
 
+canvas-umd **does** depend on a global reference to `createjs`. That variable will need to exist before loading this one in order to work. Despite my best efforts, there's no workable solution for shimming it into a module format.
+
 **This library only works in a browser environment currently, CanvasRenderingContext2D support in node sucks**
 ```
 var umd = CanvasUmd({ 
