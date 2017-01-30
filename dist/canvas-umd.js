@@ -168,7 +168,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-	exports.default = CanvasUmd;
+	CanvasUmd.default = CanvasUmd;
+	module.exports = CanvasUmd;
 
 /***/ },
 /* 1 */

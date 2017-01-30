@@ -112,4 +112,5 @@ CanvasUmd.prototype = {
   }
 };
 
-exports.default = CanvasUmd;
+CanvasUmd.default = CanvasUmd;
+module.exports = CanvasUmd;
