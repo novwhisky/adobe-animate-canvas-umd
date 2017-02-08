@@ -68,9 +68,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if(!(this instanceof CanvasUmd))
 	    return new CanvasUmd(options);
 
+	  var nameWarningRx = /^\d|\W/g;
+
 	  if(!('module-name' in options)) {
 	    throw new Error("Missing required argument 'module-name'");
 	  }
+	  /*
+	   * If an Adobe Animate file name contains any weird characters, the JS export won't quite match
+	   * because of variable naming limitations. CanvasUmd will attempt to correctly filter the name but the rules
+	   * Adobe uses are not documented anywhere.
+	   *
+	   * Noted observations:
+	   * 1) Capitalization IS preserved
+	   * 2) Instances that start with a numeral are prefixed by `_`
+	   * 3) Special characters ($, parenthesis) and whitespace are filtered out
+	   */
+	  else if(nameWarningRx.test(options['module-name'])) {
+	    var name = options['module-name']
+	        // Prefix underscore when first character is a number
+	        .replace(/^(\d)/, "_$1")
+	        // Remove non-word characters (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-word)
+	        .replace(/\W/g, "");
+
+	    console.warn(
+	        'Special characters detected!\n' +
+	        'You are probably seeing this message because the Adobe Animate source file contained whitespace or special characters.\n' +
+	        'CanvasUmd will attempt to remap the filename, but it is safer to use only letters, numbers, and underscores in the name of your FLA/XFL file.\n' +
+	        'Inferred name: ' + name
+	    );
+
+	    options['module-name'] = name;
+	  }
+
+
 
 	  this.options = options;
 
