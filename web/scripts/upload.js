@@ -31,7 +31,11 @@ require(['scripts/vendor/canvas-umd', 'scripts/iframe-previewer'], function(umdL
     }
 
     function convertFile(fileObject) {
-        var fileName = fileObject.name.match(/([\.\-\w]+)\.\w+?$/)[1];
+        var fileName = fileObject.name
+            .match(/(.*)\.[A-Z0-9]+|([^\.]+)$/i).slice(1)
+            .filter(function(v) { return !!v })
+            .shift();
+
         var umdConfig = {
             'module-name': fileName,
             'parse-labels': true
