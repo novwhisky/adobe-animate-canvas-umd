@@ -1,13 +1,12 @@
-var webpack = require('webpack');
-
 module.exports = {
-    entry: './index.js',
-    output: {
-        path: __dirname + '/dist',
-        filename: 'canvas-umd.js',
-        libraryTarget: 'umd'
+    entry: {
+        'dist/canvas-umd': './index.js',
+        'docs/scripts/upload-demo': './web/scripts/upload.js',
+        'docs/scripts/createjs-2015.11.26.combined': 'script-loader!CreateJS/builds/createjs-2015.11.26.combined'
     },
-    externals: {
-        'createjs': 'createjs'
+    output: {
+        path: __dirname,
+        filename: '[name].js',
+        libraryTarget: 'umd'
     }
 };

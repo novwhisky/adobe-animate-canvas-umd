@@ -1,11 +1,15 @@
-require.config({
-    baseUrl: '/',
-    paths: {
-        createjs: 'scripts/vendor/createjs-2015.11.26.combined'
+function ready(fn) {
+    if (document.readyState != 'loading'){
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
     }
-});
+}
 
-require(['scripts/vendor/canvas-umd', 'scripts/iframe-previewer'], function(umdLib, iframeUtil) {
+var umdLib = require('../../dist/canvas-umd');
+var iframeUtil = require('./iframe-previewer');
+
+ready(function() {
     var canvasUmd = umdLib.default;
     var fileSelect = document.querySelector('input[type="file"]');
     var source = document.querySelector('textarea');
@@ -16,14 +20,14 @@ require(['scripts/vendor/canvas-umd', 'scripts/iframe-previewer'], function(umdL
 
     function readFile(fileObject, cb) {
         var reader = new FileReader();
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             cb(e.target.result);
         }
         reader.readAsText(fileObject);
     }
 
     function initUI() {
-        overlayToggle.addEventListener('click', function(e) {
+        overlayToggle.addEventListener('click', function (e) {
             e.stopImmediatePropagation();
             //console.log('toggle', e);
             source.classList.toggle('hide');
@@ -33,7 +37,9 @@ require(['scripts/vendor/canvas-umd', 'scripts/iframe-previewer'], function(umdL
     function convertFile(fileObject) {
         var fileName = fileObject.name
             .match(/(.*)\.[A-Z0-9]+|([^\.]+)$/i).slice(1)
-            .filter(function(v) { return !!v })
+            .filter(function (v) {
+                return !!v
+            })
             .shift();
 
         var umdConfig = {
@@ -41,7 +47,7 @@ require(['scripts/vendor/canvas-umd', 'scripts/iframe-previewer'], function(umdL
             'parse-labels': true
         };
 
-        readFile(fileObject, function(fileContents) {
+        readFile(fileObject, function (fileContents) {
             var umd = canvasUmd(umdConfig).convert(fileContents);
             source.value = umd;
 
@@ -50,12 +56,12 @@ require(['scripts/vendor/canvas-umd', 'scripts/iframe-previewer'], function(umdL
     }
 
 
-    fileSelect.addEventListener('change', function(e) {
-        if(e.target.files.length) {
+    fileSelect.addEventListener('change', function (e) {
+        if (e.target.files.length) {
             convertFile(e.target.files.item(0));
             source.classList.remove('hide');
         }
-    })
+    });
 
     initUI();
 });

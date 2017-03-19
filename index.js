@@ -1,4 +1,4 @@
-require('createjs');
+require('./src/createjs-shim');
 
 /**
  * CanvasUmd object that manages export conversion
