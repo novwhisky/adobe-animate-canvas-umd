@@ -85,7 +85,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    function initUI() {
 	        overlayToggle.addEventListener('click', function (e) {
 	            e.stopImmediatePropagation();
-	            //console.log('toggle', e);
 	            source.classList.toggle('hide');
 	        })
 	    }
