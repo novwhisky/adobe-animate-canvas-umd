@@ -1,7 +1,5 @@
 /* global commonJsStrict */
 
-define([], function() {
-
   var iframe;
 
   function buildIframe() {
@@ -69,8 +67,7 @@ define([], function() {
     sizeIframeToCanvas();
   }
 
-  return {
+  module.exports = {
     startPreview: startPreview,
     buildIframe: buildIframe
-  }
-});
+  };
