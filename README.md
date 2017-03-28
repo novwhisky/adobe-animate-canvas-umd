@@ -4,7 +4,7 @@ Wraps [Adobe Animate](https://www.adobe.com/products/animate.html) HTML5 canvas 
 
 ### Conversion example
 
-Give it a try at [wittnl.github.io/canvas-umd](//wittnl.github.io/canvas-umd/)
+Give it a try at [wittnl.github.io/adobe-animate-canvas-umd](//wittnl.github.io/adobe-animate-canvas-umd/)
 
 ### Usage
 
