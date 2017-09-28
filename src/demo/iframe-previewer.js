@@ -6,7 +6,6 @@
     iframe = document.createElement('iframe');
     iframe.id = 'iframePreview';
     iframe.src = 'preview.html';
-    iframe.frameBorder = 'none';
     iframe.scolling = 'no';
     document.body.appendChild(iframe);
     return iframe;
