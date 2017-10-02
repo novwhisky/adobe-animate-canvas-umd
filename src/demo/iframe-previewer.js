@@ -28,7 +28,8 @@
 
   function sizeIframeToCanvas() {
     var scope = getIframeScope();
-    var props = getModule().lib.properties;
+    var def = getModule().default;
+    var props = def.getLibrary().properties;
 
     iframe.width = props.width;
     iframe.height = props.height;
@@ -60,9 +61,11 @@
 
     var scope = getIframeScope();
     var module = getModule();
+    var def = module.default;
 
     var exp = new module.construct();
-    scope.w.startCanvas(exp, module.lib);
+
+    scope.w.startCanvas(exp, def.getLibrary());
     sizeIframeToCanvas();
   }
 

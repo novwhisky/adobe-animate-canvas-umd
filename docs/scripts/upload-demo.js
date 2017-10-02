@@ -261,7 +261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		   */
 		  removeCreateJSVar: function removeCreateJSVar(exportJS) {
 		    var lines = exportJS.toString().split('\n');
-		    var noGoodVeryBadGlobals = lines.pop().replace(/(,\s+)?createjs/, '');
+		    var noGoodVeryBadGlobals = lines.pop().replace(/createjs,?\s?/, '');
 		    lines.push('//// var "createjs" filtered out by canvas-umd to allow encapsulated interop', noGoodVeryBadGlobals);
 		    return lines.join('\n');
 		  },
@@ -286,8 +286,8 @@ return /******/ (function(modules) { // webpackBootstrap
 		   */
 		  getFrameLabels: function(exportJS) {
 		    var exportedVars = this.getExportedVars(exportJS);
-		    var libVarName = exportedVars[0];
-		    var initializer = 'return new ' + libVarName + '["'+ this.options['module-name'] +'"]();';
+		    var AdobeAn = exportedVars[0];
+		    var initializer = 'return new (' + AdobeAn + '.compositions[Object.keys(' + AdobeAn + '.compositions)[0]].getLibrary()["'+ this.options['module-name'] +'"])();';
 		    var wrap = 'return (function(){' + exportJS + '\n\n' + initializer + '\n})()';
 		    var def = new Function(wrap)();
 
@@ -319,13 +319,40 @@ return /******/ (function(modules) { // webpackBootstrap
 		  },
 
 		  /**
+		   * Animate CC 2017.5
+		   * @param exportJS The default Adobe Animate CC 2017.5 JavaScript global module, e.g. (function(cjs, an){...})
+		   * @returns {string}
+		   */
+		  Animate2UMD2017_5: function Animate2UMD(exportJS) {
+		    var exportVars = this.getExportedVars(exportJS);
+		    var replaceToken = '{{REPLACE}}';
+		    var AdobeAn = exportVars[0];
+
+		    var frameLabels = (this.options['parse-labels'])? this.getFrameLabels(exportJS): {};
+		    console.log(frameLabels);
+
+		    var moduleExport =  '\t//// Animate CC 2017.5 export wrapped by canvas-umd\n'+
+		        '\tvar compId = Object.keys(' + AdobeAn + '.compositions)[0];\n' +
+		        '\tvar comp = ' + AdobeAn + '.compositions[compId];\n' +
+		        '\tcomp.getLibrary().properties.frameLabels = ' + JSON.stringify(frameLabels) +';\n\n' +
+		        '\texports["default"] = ' + AdobeAn + '.compositions[compId];\n' +
+		        '\texports["construct"] = exports["default"].getLibrary()["' + this.options['module-name'] + '"];\n'
+
+		    // Done massaging data points, now put all the pieces together
+		    var wrappedModule = [exportJS, moduleExport].join('\n\n');
+		    var template = this.template.replace(replaceToken, wrappedModule);
+
+		    return template;
+		  },
+
+		  /**
 		   * Converts raw Adobe Animate JS export to universal module definition for modern JavaScript ecosystem usage
 		   * @param exportJS
 		   * @returns {string}
 		   */
 		  convert: function(exportJS) {
 		    var sanitized = this.removeCreateJSVar(exportJS);
-		    var umd = this.Animate2UMD(sanitized);
+		    var umd = this.Animate2UMD2017_5(sanitized);
 		    return umd;
 		  }
 		};
@@ -415,7 +442,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  function sizeIframeToCanvas() {
 	    var scope = getIframeScope();
-	    var props = getModule().lib.properties;
+	    var def = getModule().default;
+	    var props = def.getLibrary().properties;
 
 	    iframe.width = props.width;
 	    iframe.height = props.height;
@@ -447,9 +475,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    var scope = getIframeScope();
 	    var module = getModule();
+	    var def = module.default;
 
 	    var exp = new module.construct();
-	    scope.w.startCanvas(exp, module.lib);
+
+	    scope.w.startCanvas(exp, def.getLibrary());
 	    sizeIframeToCanvas();
 	  }
 
