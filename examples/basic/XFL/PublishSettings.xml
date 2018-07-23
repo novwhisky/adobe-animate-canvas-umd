@@ -55,7 +55,7 @@
     <Property name="exportLibsToFolder">true</Property>
     <Property name="exportSounds">true</Property>
     <Property name="exportSoundsToFolder">true</Property>
-    <Property name="filename">./animate-output/Animate CC 2017.5/wombat.js</Property>
+    <Property name="filename">./animate-output/Animate CC 2018/wombat.js</Property>
     <Property name="frameBounds">false</Property>
     <Property name="hostedLibs">true</Property>
     <Property name="imageFormat">0</Property>
