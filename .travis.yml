@@ -1,10 +1,13 @@
 language: node_js
 node_js:
 - node
+stages:
+ - npm release
+ - GitHub pages
 jobs:
   include:
-  - script: webpack
   - stage: npm release
+    script: webpack
     deploy:
       provider: npm
       email: "$EMAIL"
@@ -13,6 +16,7 @@ jobs:
       on:
         tags: true
   - stage: GitHub pages
+    script: webpack
     deploy:
       provider: pages
       skip_cleanup: true
@@ -20,6 +24,7 @@ jobs:
       local_dir: dist
       on:
         branch: master
+        tags: true
 env:
   matrix:
   - secure: qvx55R/5vM9VOeFgWxml0ZFp37Vyo7eOGlKmZfkpysstqhvQ97P0j+W87R44nwpNF/WS5xgkHZZ0n9JBZ+V3OJeALj69u1zXh9I06x42cRwKnD1Fxzu3PPg2boUyEpPe24Kc7CES9oAaPWgkp6R6V7v7h8d/WOmP6nrtt+GQ3Mezj7frDdjP9C+W4Wau/TUURK5o0Al/JGW46fIFFCEMME3jeMVKxoMcZrE+7iQIwoUC1OOAaM5OMQFdoXZ7hB/zeMGNrDl24YvbBRTX9yKyPK9RHkLukdq8CuA9hgjyWGA7vzViQT2OHfVvhnU2REc4mFsBf0RNNHd2KuDhAH6I/FGNQ6sEncO3J3r3VW9/oBpscSMGVRyBAqzHjcP4E8GByF0w07q/3k6qf+GWEV9ohJ0MIglrWcSHpTj4/LNekWnE7Y7kAVuF+W85iun3tG+AmxI9lhH3zAP7cVYWBbfT8plkbgz0ySVrnUfO2bKdM5URFZ0N3ScZEoNfGAQdyGV0JMom+c+U+C4N/19jPNduTcuz8zckidFhQlJmLjwwlJtiGium8JPwegqTjGox9tl5a/htTPKgNG7gnezuvXASp/Bk1qJ+fQqiQ0pstlhwP9lu+HokJ/dSn1YF8mAhpQJ/XqymLPgvZ4D1DDB32Zxy1aSxAMWSq8BGCRTgsnIDTTo=
