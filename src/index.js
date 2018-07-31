@@ -71,10 +71,10 @@ export default class CanvasUmd {
   (function(className, frameLabels) {
     var c = (${enhancedCompositionGetter()})(${metadata.compId ? "'"+metadata.compId+"'": ""});
     var l = c.getLibrary();
-    l.properties.frameLabels = frameLabels;
 
     exports['composition'] = c;
     exports['ExportRoot'] = l[className];
+    exports['frameLabels'] = frameLabels;
 
   }('${metadata.className}', ${JSON.stringify(metadata.frameLabels)}));
 }));
