@@ -1,23 +1,27 @@
 language: node_js
 node_js:
 - node
-script:
-- webpack
-deploy:
-  matrix:
-  - provider: pages
-    skip_cleanup: true
-    github_token: "$GITHUB_TOKEN"
-    local_dir: dist
-    on:
-      branch: master
-  - provider: npm
-    email: "$EMAIL"
-    skip_cleanup: true
-    api_key: "$NPM_TOKEN"
-    on:
-      tags: true
+jobs:
+  include:
+  - script: webpack
+  - stage: npm release
+    deploy:
+      provider: npm
+      email: "$EMAIL"
+      skip_cleanup: true
+      api_key: "$NPM_TOKEN"
+      on:
+        tags: true
+  - stage: GitHub pages
+    deploy:
+      provider: pages
+      skip_cleanup: true
+      github_token: "$GITHUB_TOKEN"
+      local_dir: dist
+      on:
+        branch: master
 env:
   matrix:
-  - secure: qLOlAaqwFE7HjLuqQSKDtvalPjyhYQWvdxkVLee9y6SNp5QWTQ42uej1xcVqH8E1DYThXB2d0Coa4gDFowWIdHOD0If2iNiqievb9rm6XQNsPlygJu34bUqPTj0gpriUMC7e3boVav1QszHvrjc4QoL5D+76Sqz6ukXnwQvyE03Mg61qO3HpdsQ0rJ7JtnIakPacNCp0UaMM+XPWjOPZmW0YR0JxE9Dmxkqwe/38D5Nn5dtzbyWGfc7C6ooYZLlhsmh1sF1nED+k+DLUkHGKK6bvfeSfsXZ7s0iNF9KP/RlLOz2QPusrYU6rXXhn5afYkN0KZu21w0kO0lvpxOdfzECjyWenKnLaY7Ued5sFFEUiYXgr8mVxX9nFF8wAQ/ujDbHlIF8JzQAlOm2T7F9i7H/EFrnBlJ/aPk3qc8/wnfMs8C+q3ERum48jqqIBL/K1pgtU+4oyAXGl01ZYfKg960PG/rRtOyhULiV20CWIlmF8I/roa2zhB0gRnSF8UsqYgX6bxKCRfS9YNFRZvc/BL+6ijXrzavHhN+d08506V7AkDONfTxn+wmdxClbc78GCwNMRqKKSRf8jc/Ung7oiZ6zikQDQadBKhhaHOU9jDVTddDbBh79zcHRu/v8pqjtvIbraO6Kid6appAzWkdroAGOhDPJOyuKS0HZnmRJnbzw=
-  - secure: f8OkIBi6bchdYMmo2oAzEswn3biWzWBux8OexYEHHM2eGTR0qCfaBu3sAHalQs1onLAOnPbNL8Y13Oh9ZtX3kMIFcK0Uhh/SEvzAYRPCnsmNHAQxCqVrL07BKwmcdCVdDz9zvBbUrptzWqug1vSxGzIGSK6qRxRxS6OYPHIR5bGUHjfFIKkmhqz+KsZMRoY9FqxBe6TQvPWtxc2rJMVxAHwPqYfXrxlM3BBQjgf6jOGh2BwsumgLcn7DXC7klPaNI2OOLYDRlrO7taCjVsDylsWJHBlhDlpMwWTqWmZtv4r2hFWbl1smNub044h131PFp0ALua0cF/QIZfEZngJNYFSr5lIOyvLwetMQ/SK8cTrhhdMK9Z98tE88DOt27KcsDg4McwrG9/eTiik7Cz5bv7hWimuprHTWNcFoxd0IDvkynJHdgTjR2qEDQbcRt9mOc24VfkjKq5KFkvbC1dqsLEDwcUPau/E0cHXxGiASH7eFLZRRnzArF46QPflH8qyp/BFN1sZmsCo4VdmAECxNsLNbL3DlQx+RyoruLaphx2cXw7pSxXIIl2sloID4X/EqM979Ex3Ropatqm6GpQMamQtjjw+F55HERzRJBcn8JMF06J8tOEKgvMjBvMX1tOHguMxb8KHdiQcEha4qxJ15Vi2WMoANHy9TxDmeqbO3hRw=
+  - secure: qvx55R/5vM9VOeFgWxml0ZFp37Vyo7eOGlKmZfkpysstqhvQ97P0j+W87R44nwpNF/WS5xgkHZZ0n9JBZ+V3OJeALj69u1zXh9I06x42cRwKnD1Fxzu3PPg2boUyEpPe24Kc7CES9oAaPWgkp6R6V7v7h8d/WOmP6nrtt+GQ3Mezj7frDdjP9C+W4Wau/TUURK5o0Al/JGW46fIFFCEMME3jeMVKxoMcZrE+7iQIwoUC1OOAaM5OMQFdoXZ7hB/zeMGNrDl24YvbBRTX9yKyPK9RHkLukdq8CuA9hgjyWGA7vzViQT2OHfVvhnU2REc4mFsBf0RNNHd2KuDhAH6I/FGNQ6sEncO3J3r3VW9/oBpscSMGVRyBAqzHjcP4E8GByF0w07q/3k6qf+GWEV9ohJ0MIglrWcSHpTj4/LNekWnE7Y7kAVuF+W85iun3tG+AmxI9lhH3zAP7cVYWBbfT8plkbgz0ySVrnUfO2bKdM5URFZ0N3ScZEoNfGAQdyGV0JMom+c+U+C4N/19jPNduTcuz8zckidFhQlJmLjwwlJtiGium8JPwegqTjGox9tl5a/htTPKgNG7gnezuvXASp/Bk1qJ+fQqiQ0pstlhwP9lu+HokJ/dSn1YF8mAhpQJ/XqymLPgvZ4D1DDB32Zxy1aSxAMWSq8BGCRTgsnIDTTo=
+  - secure: TZrIBvK7TVkU4a4QQUz63TUKz/J5bok4U+ArD5HGBkA2j+U8+J9B7zRMf6JDE6Bs0am45fD1a8Liw3+rHXCp3Y7RtAZ/vwv8k/CgOvLWZLYh+/Q3ZVfL196p6OA/BKfntD18o5QRYitkEPCeR35yiHRdYRiVMpyQ8gMAl6RXimy8ZVpMiWqswUppHOEX6mmcmujmG6Mwe40pze8U0VGJyWsC27vPZguQw5h7uRGrrrLXGDSI+YyRBMxShbB4Il7eRNXyF3t8h+Dcv+U/uSywlIFIhLtZXIwvZjWdlYIKat6W0ZT8/2771iV5H/94RWj/5DWu2RtCcdtBvPtTPty+ikZomrfDRVFVHLAHyuT4lB6yYeP/Ieum/1Tcp0BI2fwwOSOkn1GoxroDEFzKsjD+g35uHbaeJ7dw+WeGaSG/PVfn0aQywww6Hq5yRNFc+1EcjD6wL9D+yYuTsYCjYrfRQNd0yYlrbl8PoC3bUgoF03ehMblA7lTzBuK10jUb2wya6Sf2X2jjGNBDAdniqTVu8Wrz0o5VoSxUVMWlVK5byVRCNnfJSO6B+HbCMgNlx0SPfnstYkbHGsII09jViwNkwXBcMOaEA7kKxmQr+SmzqfjhyorDok+73JOWjcYZ73VXkUhSxk3chRkeYGbiPr0mfxU7SW1sgoWlHrFCHlEnHB8=
+  - secure: spc1Hl/DluTF7KrhJuNBXdNiinqVf1/3F6IREMyJ7TKsGbuKPVJEwoSJM43hV25OEzZjB2foPNDc0B+YzYOoamCIthSnpuDV3B2DhryuLlFxF7dLbpmygunMTKUTCx7gR/v0LC9WOFB+9deW3gnct4Fs2GZoebcRsFSFyVBFPkiIkFlAeYPxedACBETaAAE+OTtYgkwSRpR6uu8wtp34ZhldfQUxDEQ9Rk/tASUE0NaJYHdhuQVkA67VBlKRchiXkba02/jV0W5hptDTshzYvm3WoP/HdAw94HFbbg1Sd+4RTavO9PdLpg6+9xBUNV/CYxk+aPPUTtDxoc4V7+wjdzQSp/knzHFD0C4L7r5C28/KWdyeKjp0Dk6c92GmCRBzGCPT4DSGfa7GdAhehaLCsnVsT5YzcHFJhUVslvsq4QHGPFqP2B5fxoMrYCpQy7i9b2rJrmyiaIkKSl0eLyrZWt0NJ2rC7L+FS4IWJRTf3Eecg3gn25UTfYlbbmVtNjykEUWBbJdjZ1G7cqFP3uEtQXOVGOKmsWULBMQwkGqsDy/vzin/cK5KjyuBco2c9L9ivyZuAIWph4QIWKhNuFcY/k+DaGNTHyUNVMGjD1/kidJBIncWFbbkUC4gSlAMtU9sQy9PmsZhw5E1TTqhYPJrafXGgxSQL7CeJP9V32fD/t0=
