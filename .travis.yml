@@ -3,8 +3,6 @@ node_js:
 - node
 script:
 - webpack
-before_script:
-  - npm install
 deploy:
   matrix:
   - provider: pages
