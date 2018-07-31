@@ -4,12 +4,20 @@ node_js:
 script:
 - webpack
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: docs
-  on:
-    branch: master
+  matrix:
+  - provider: pages
+    skip_cleanup: true
+    github_token: "$GITHUB_TOKEN"
+    local_dir: dist
+    on:
+      branch: master
+  - provider: script
+    script: npm publish
+    skip_cleanup: true
+    on:
+      tags: true
+  api_key:
+    secure: hjau5woWXPpzmI+JyyoO2grXQk3MoAE77XbIOgVh68cMMFQyqOB2cjZSBR3WRVjENusZGpDQQUdXkTWkWMQCgN8ylR6yqyFLIU5Rp1CgypuP4oBu/h6GQd5NHgPF6nJ50/p5PzpbeFtR2iQqCFsPhLsTj0NFRl+QUsYi+6yRgPSwtLRyC63fWn8NKou6ZFhsqV9KaxmOvgnazpcoWMaUtVg3HbH6+3Q33akK/Tge7Dda0cwS57M/7vM5oXEzwEIYdenJOirkSwzw+McT+6PeuzKJ+Ld2QL3SB+KUV/o+jVxzXisGrxHHEdCZWhkRoIC7AQ5O0iuJzplteNbZYUaLXi3DegDbHFwv2eBA6ShoU7njea2iS0NAdUzD1qbq0mNuESGZjpA7TgxmukSO63TwX+aDkX0zswBCOfBfgkYaMwKMb0AwEUZYJqIe7H5wsMUKmtcaT/0dWAgCjGzdx42E+McA8NM7t3dIWDyIz7WCVEwggNNta0NSlYKCOD6+JR3eVGDTC8lui9oXNbF14OgL3ePkGL/5aW2pNPWsYn7+tJAqK8odPi4cM0yIEW5nzgjr5+kcITCQQw4KnfOBFOeczyA+sS2KnbJUXyFrnOgroE04VH8Q29dHWvfJuyRmdtnfEE2IafKIM3zl7OSv8mFhxxq2/Li5xBMvLqK2XBQZ+QY=
 env:
   matrix:
     secure: qLOlAaqwFE7HjLuqQSKDtvalPjyhYQWvdxkVLee9y6SNp5QWTQ42uej1xcVqH8E1DYThXB2d0Coa4gDFowWIdHOD0If2iNiqievb9rm6XQNsPlygJu34bUqPTj0gpriUMC7e3boVav1QszHvrjc4QoL5D+76Sqz6ukXnwQvyE03Mg61qO3HpdsQ0rJ7JtnIakPacNCp0UaMM+XPWjOPZmW0YR0JxE9Dmxkqwe/38D5Nn5dtzbyWGfc7C6ooYZLlhsmh1sF1nED+k+DLUkHGKK6bvfeSfsXZ7s0iNF9KP/RlLOz2QPusrYU6rXXhn5afYkN0KZu21w0kO0lvpxOdfzECjyWenKnLaY7Ued5sFFEUiYXgr8mVxX9nFF8wAQ/ujDbHlIF8JzQAlOm2T7F9i7H/EFrnBlJ/aPk3qc8/wnfMs8C+q3ERum48jqqIBL/K1pgtU+4oyAXGl01ZYfKg960PG/rRtOyhULiV20CWIlmF8I/roa2zhB0gRnSF8UsqYgX6bxKCRfS9YNFRZvc/BL+6ijXrzavHhN+d08506V7AkDONfTxn+wmdxClbc78GCwNMRqKKSRf8jc/Ung7oiZ6zikQDQadBKhhaHOU9jDVTddDbBh79zcHRu/v8pqjtvIbraO6Kid6appAzWkdroAGOhDPJOyuKS0HZnmRJnbzw=

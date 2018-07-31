@@ -1,12 +1,42 @@
+const path = require('path');
+
+const webpack = require('webpack');
+const Html = require('html-webpack-plugin');
+
 module.exports = {
-    entry: {
-        'dist/canvas-umd': './index.js',
-        'docs/scripts/upload-demo': './src/demo/upload.js',
-        'docs/scripts/createjs-2015.11.26.combined': 'script-loader!createjs/builds/createjs-2015.11.26.combined'
-    },
-    output: {
-        path: __dirname,
-        filename: '[name].js',
-        libraryTarget: 'umd'
-    }
+  devtool: 'source-map',
+  devServer: {
+    contentBase: './docs',
+    hot: true
+  },
+  entry: {
+    'canvas-umd': './src/index.js',
+    'demo': './src/demo.js'
+  },
+  mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars-loader'
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }
+    ]
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    libraryTarget: 'umd'
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new Html({
+      filename: 'index.html',
+      template: './src/demo.hbs'
+    })
+  ]
 };

@@ -40,7 +40,6 @@
   <PublishProperties id="C6B9CB0C-C6DC-4FBC-9805-93E9EB37A444" name="JavaScript/HTML" otf="true" enabled="true">
     <Property name="SiteUrl"> </Property>
     <Property name="bitDepth">8</Property>
-    <Property name="bootstrapSupportEnabled">false</Property>
     <Property name="centerOption">2</Property>
     <Property name="centerStage">false</Property>
     <Property name="compactPaths">true</Property>
@@ -56,7 +55,7 @@
     <Property name="exportLibsToFolder">true</Property>
     <Property name="exportSounds">true</Property>
     <Property name="exportSoundsToFolder">true</Property>
-    <Property name="filename">./animate-output/wombat.js</Property>
+    <Property name="filename">./animate-output/Animate CC 2018/wombat.js</Property>
     <Property name="frameBounds">false</Property>
     <Property name="hostedLibs">true</Property>
     <Property name="imageFormat">0</Property>

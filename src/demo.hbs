@@ -2,7 +2,7 @@
 <html>
 <head>
     <style type="text/css">
-        body {margin: 0; padding: 0}
+        body { margin: 0; padding: 0; font-family: arial, helvetica, sans-serif; }
 
         #preOverlay textarea.hide { display: none; }
 
@@ -29,17 +29,22 @@
 
         iframe { border: none; }
     </style>
-    <script src="scripts/upload-demo.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.js"></script>
 </head>
 <body>
-    <div id="ui">
-        <div id="preOverlay">
-            <p><button id="togglePre">UMD output</button></p>
-            <p><textarea class="hide" readonly></textarea></p>
-        </div>
-        <form action="" name="uploader">
-            <input name="file" type="file" />
-        </form>
+<div id="ui">
+    <div id="preOverlay">
+        <p><button id="togglePre">UMD output</button></p>
+        <p><textarea class="hide" readonly></textarea></p>
     </div>
+    <form action="" name="uploader">
+        <input name="file" type="file" />
+        <strong>Animate CC 2017.5</strong>
+    </form>
+</div>
+<div id="animation_container">
+    <canvas id="canvas"></canvas>
+    <div id="dom_overlay_container"></div>
+</div>
 </body>
 </html>
