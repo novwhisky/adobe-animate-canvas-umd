@@ -52,35 +52,36 @@ export default class CanvasUmd {
   }
 
   /**
-   * Composites IIFE footer for exposing UMD support
+   * Composites IIFE footer for exposing AMD support
    * @param {Object} metadata - properties used by CanvasUmd to target original export source
    * @param {String} metadata.className - Name of exportRoot property
    * @param {String} [metadata.compId] - Animate composition id
-   * @param {Object} metadata.frameLabels - Frame labels if any, otherwise an empty object
+   * @param {Object} [metadata.frameLabels] - Frame labels if any, otherwise an empty object
    * @return {String} footer
    */
   static generateFooter(metadata) {
-    const template = `
-    
+    const { compId, className, frameLabels } = metadata;
+
+    return `
+
 /* canvasumd:start */
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) define(['exports'], factory); /* AMD */
-  else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') factory(exports); /* CommonJS */
-  else factory((root.commonJsStrict = {})); /* Global */
-}(this, function (exports) {
-  (function(className, frameLabels) {
-    var c = (${enhancedCompositionGetter()})(${metadata.compId ? "'"+metadata.compId+"'": ""});
-    var l = c.getLibrary();
+	if(typeof define === 'function' && define.amd) define([], factory);
+	else root.amdWeb = factory();
+	/* no CommonJS due to browser api dependencies (CreateJS) */
+}(this, function() {
+	var c = (${enhancedCompositionGetter()})(${JSON.stringify(compId)});
+	var l = c.getLibrary();
 
-    exports['composition'] = c;
-    exports['ExportRoot'] = l[className];
-    exports['frameLabels'] = frameLabels;
-
-  }('${metadata.className}', ${JSON.stringify(metadata.frameLabels)}));
+	return {
+		composition: c,
+		ExportRoot: l[${JSON.stringify(className)}],
+		frameLabels: ${JSON.stringify(frameLabels)}
+	}
 }));
 /* canvasumd:end */
 `;
-    return template;
+
   }
 
   /**
@@ -119,8 +120,11 @@ export default class CanvasUmd {
    */
   convert(animateJS) {
     const footerRx = /\/\*\scanvasumd\:start\s\*\/\n([\s\S]+)\/\*\scanvasumd\:end\s\*\//gm;
+    const noGlobalsRx = /^var.+AdobeAn;$/m; // Causes ReferenceError in Node, but we need it to import in browser
     const metadata = this.ingest(animateJS);
     const footer = CanvasUmd.generateFooter(metadata);
-    return animateJS.replace(footerRx, '') + footer;
+    return animateJS
+      .replace(noGlobalsRx, '')
+      .replace(footerRx, '') + footer;
   }
 }

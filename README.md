@@ -14,7 +14,8 @@ Give it a try at [wittnl.github.io/adobe-animate-canvas-umd](//wittnl.github.io/
 CanvasUmd depends on a global reference to `createjs`. That variable [must exist](http://code.createjs.com) 
 before loading in order to work. Despite my best efforts, there's no workable solution for shimming it into a module format.
 
-**This library only works in a [browser environment](src/demo.js#L52) currently, CanvasRenderingContext2D support in node sucks**
+**This library only works in a [browser environment](src/demo.js#L52) currently, CanvasRenderingContext2D support in 
+node sucks and CreateJS depends on specific DOM APIs**
 ```
 var umd = CanvasUmd({ 
     'class-name': 'my_animation'
@@ -44,10 +45,6 @@ const startAnimation = ({ ExportRoot }) => {
 }
   
 require(['path/to/animation'], startAnimation);
-
-// Or
-
-import('path/to/animation').then(startAnimation);
 ```
 
 ### Options
@@ -56,10 +53,10 @@ import('path/to/animation').then(startAnimation);
 characters are filtered out.
 * `parse-labels` - **Experimental** Parse out top-level frame labels and add them to `exports.frameLabels` for static evaluation.
 
-### UMD Enhancements
+### Enhancements
 
 * Better component organization and **no global variables**
-* Integrates with isometric JavaScript workflow (Webpack/AMD modules)
+* Integrates with AMD loaders
 * Adds `frameLabels` as a static module property
 
 ### <a name="how-it-works">How it works</a>
@@ -73,21 +70,20 @@ bottom of the original definition, enabling [UMD support](examples/umd.js).
 
 /* canvasumd:start */
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) define(['exports'], factory); /* AMD */
-  else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') factory(exports); /* CommonJS */
-  else factory((root.commonJsStrict = {})); /* Global */
-}(this, function (exports) {
-  (function(className, frameLabels) {
-    var c = (function AnimateCC_2017_5_plus(compId) {
-      return AdobeAn.compositions[compId];
-    })('D42F2973F03C46B7A7B10E96EF073291');
-    var l = c.getLibrary();
+  if(typeof define === 'function' && define.amd) define(['exports'], factory); /* AMD */
+  else factory((root.amdWeb = {}));
+  /* no CommonJS due to browser api dependencies (CreateJS) */
+}(this, function(exports) {
+  var c = (function AnimateCC_2017_5_plus(compId) {
+    return AdobeAn.compositions[compId];
+  })("D42F2973F03C46B7A7B10E96EF073291");
+  var l = c.getLibrary();
 
-    exports['composition'] = c;
-    exports['ExportRoot'] = l[className];
-    exports['frameLabels'] = frameLabels;
-
-  }('wombat', [{"label":"On","position":0},{"label":"Off","position":29}]));
+  return {
+    composition: c,
+    ExportRoot: l["wombat"],
+    frameLabels: [{"label":"On","position":0},{"label":"Off","position":29}]
+  }
 }));
 /* canvasumd:end */
 
