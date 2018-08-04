@@ -360,24 +360,23 @@
 
 
 })(createjs = createjs||{}, AdobeAn = AdobeAn||{});
-var createjs, AdobeAn;
+var AdobeAn;
 
 /* canvasumd:start */
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) define(['exports'], factory); /* AMD */
-  else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') factory(exports); /* CommonJS */
-  else factory((root.commonJsStrict = {})); /* Global */
-}(this, function (exports) {
-  (function(className, frameLabels) {
-    var c = (function AnimateCC_2017_5_plus(compId) {
-      return AdobeAn.compositions[compId];
-    })('D42F2973F03C46B7A7B10E96EF073291');
-    var l = c.getLibrary();
-    l.properties.frameLabels = frameLabels;
+  if(typeof define === 'function' && define.amd) define(['exports'], factory); /* AMD */
+  else factory((root.amdWeb = {}));
+  /* no CommonJS due to browser api dependencies (CreateJS) */
+}(this, function(exports) {
+  var c = (function AnimateCC_2017_5_plus(compId) {
+    return AdobeAn.compositions[compId];
+  })("D42F2973F03C46B7A7B10E96EF073291");
+  var l = c.getLibrary();
 
-    exports['composition'] = c;
-    exports['ExportRoot'] = l[className];
-
-  }('wombat', [{"label":"On","position":0},{"label":"Off","position":29}]));
+  return {
+    composition: c,
+    ExportRoot: l["wombat"],
+    frameLabels: [{"label":"On","position":0},{"label":"Off","position":29}]
+  }
 }));
 /* canvasumd:end */

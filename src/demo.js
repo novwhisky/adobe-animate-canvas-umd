@@ -1,4 +1,4 @@
-/* global: commonJsStrict */
+/* global: amdWeb */
 
 import CanvasUmd from './index';
 import { makeTemporaryComposition } from './utils';
@@ -25,7 +25,7 @@ function convertFile(fileObject) {
 }
 
 function startCanvas() {
-  const { composition, ExportRoot } = commonJsStrict;
+  const { composition, ExportRoot } = amdWeb;
   const { properties: { fps, height, width } } = composition.getLibrary();
 
   const exportRoot = new ExportRoot();

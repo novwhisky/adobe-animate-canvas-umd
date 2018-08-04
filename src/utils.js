@@ -7,17 +7,17 @@ export function findOriginalComposition() {
   }
 }
 
+function AnimateCC_2017_5_plus(compId) { return AdobeAn.compositions[compId]; }
+
+function AnimateCC_2017_1() {
+  var _lib = lib;
+  lib = undefined;
+  return { getLibrary: function() { return _lib; } };
+}
+
 export function enhancedCompositionGetter() {
-  if(AdobeAn && AdobeAn.compositions) {  /* Animate CC 2017.5 & 2018 */
-    return function AnimateCC_2017_5_plus(compId) { return AdobeAn.compositions[compId] };
-  }
-  else if (Object.keys(AdobeAn).length === 0 && lib) { /* Animate CC 2017.1 and older */
-    return function AnimateCC_2017_1() {
-      var _lib = lib;
-      lib = null;
-      return { getLibrary: function () { return _lib; } };
-    }
-  }
+  if(AdobeAn && AdobeAn.compositions) return AnimateCC_2017_5_plus;
+  else if(Object.keys(AdobeAn).length === 0 && lib) return AnimateCC_2017_1;
 }
 
 /**
@@ -39,5 +39,8 @@ export function makeTemporaryComposition(animateJS) {
  */
 export function makeTemporaryInstance(comp, className) {
   const lib = comp.getLibrary();
-  return new lib[className]();
+  if(className in lib)
+    return new lib[className]();
+
+  throw new Error(`'${className}' does not exist in the composition library. Was the filename changed?`)
 }
