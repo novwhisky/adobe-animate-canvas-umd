@@ -120,7 +120,7 @@ export default class CanvasUmd {
    */
   convert(animateJS) {
     const footerRx = /\/\*\scanvasumd\:start\s\*\/\n([\s\S]+)\/\*\scanvasumd\:end\s\*\//gm;
-    const noGlobalsRx = /^var.+AdobeAn;$/m; // Causes ReferenceError in Node, but we need it to import in browser
+    const noGlobalsRx = /^var\s.+;$/m; // Causes ReferenceErrors in Node, but we need it to import in browser
     const metadata = this.ingest(animateJS);
     const footer = CanvasUmd.generateFooter(metadata);
     return animateJS
