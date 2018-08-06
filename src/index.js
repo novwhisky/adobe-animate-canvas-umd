@@ -120,11 +120,11 @@ export default class CanvasUmd {
    */
   convert(animateJS) {
     const footerRx = /\/\*\scanvasumd\:start\s\*\/\n([\s\S]+)\/\*\scanvasumd\:end\s\*\//gm;
-    const noGlobalsRx = /^var\s.+;$/m; // Causes ReferenceErrors in Node, but we need it to import in browser
+    const filterCjsRx = /^(var\s.*)(createjs,\s)(.*)/m;
     const metadata = this.ingest(animateJS);
     const footer = CanvasUmd.generateFooter(metadata);
     return animateJS
-      .replace(noGlobalsRx, '')
+      .replace(filterCjsRx, '$1$3')
       .replace(footerRx, '') + footer;
   }
 }
