@@ -1,6 +1,6 @@
 {
   "name": "adobe-animate-canvas-umd",
-  "version": "2.0.0-7",
+  "version": "2.0.0",
   "dependencies": {
     "createjs": "^1.0.1"
   },
