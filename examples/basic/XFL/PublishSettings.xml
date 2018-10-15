@@ -39,6 +39,9 @@
   </PublishProperties>
   <PublishProperties id="C6B9CB0C-C6DC-4FBC-9805-93E9EB37A444" name="JavaScript/HTML" otf="true" enabled="true">
     <Property name="SiteUrl"> </Property>
+    <Property name="TPpngMaxSheetHeight">2048</Property>
+    <Property name="TPpngMaxSheetWidth">2048</Property>
+    <Property name="TextureBitDepth">8</Property>
     <Property name="bitDepth">8</Property>
     <Property name="centerOption">2</Property>
     <Property name="centerStage">false</Property>
@@ -55,7 +58,7 @@
     <Property name="exportLibsToFolder">true</Property>
     <Property name="exportSounds">true</Property>
     <Property name="exportSoundsToFolder">true</Property>
-    <Property name="filename">./animate-output/Animate CC 2018/wombat.js</Property>
+    <Property name="filename">./animate-output/Animate CC 2019/wombat.js</Property>
     <Property name="frameBounds">false</Property>
     <Property name="hostedLibs">true</Property>
     <Property name="imageFormat">0</Property>
@@ -76,11 +79,13 @@
     <Property name="pngMaxSheetWidth">8192</Property>
     <Property name="preloaderName">Default</Property>
     <Property name="quality">80</Property>
+    <Property name="resolution">2</Property>
     <Property name="responsiveOption">2</Property>
     <Property name="scaleOption">0</Property>
     <Property name="scaleStage">false</Property>
     <Property name="soundsPath">sounds/</Property>
     <Property name="templateTitle">Default Template</Property>
+    <Property name="textureConversion">false</Property>
     <Property name="version">0.1</Property>
     <Property name="webfontEmbedCode">null</Property>
   </PublishProperties>
