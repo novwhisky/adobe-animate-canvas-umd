@@ -35,6 +35,7 @@
     <Property name="filename">wombat.svg</Property>
     <Property name="imagesPath">images</Property>
     <Property name="includeHiddenLayers">true</Property>
+    <Property name="optimizeForCH">false</Property>
     <Property name="version">0.1</Property>
   </PublishProperties>
   <PublishProperties id="C6B9CB0C-C6DC-4FBC-9805-93E9EB37A444" name="JavaScript/HTML" otf="true" enabled="true">
@@ -58,7 +59,7 @@
     <Property name="exportLibsToFolder">true</Property>
     <Property name="exportSounds">true</Property>
     <Property name="exportSoundsToFolder">true</Property>
-    <Property name="filename">./animate-output/Animate CC 2019/wombat.js</Property>
+    <Property name="filename">./animate-output/Animate CC 2020/wombat.js</Property>
     <Property name="frameBounds">false</Property>
     <Property name="hostedLibs">true</Property>
     <Property name="imageFormat">0</Property>
@@ -74,6 +75,7 @@
     <Property name="loop">true</Property>
     <Property name="makeResponsive">false</Property>
     <Property name="optimizeExport">true</Property>
+    <Property name="optimizeImages">false</Property>
     <Property name="pngBackground">#00000000</Property>
     <Property name="pngMaxSheetHeight">8192</Property>
     <Property name="pngMaxSheetWidth">8192</Property>
