@@ -1,37 +1,24 @@
+
+function NoAnimationError() {
+  const deprecatedAnVer = typeof(AdobeAn) === 'undefined' || Object.keys(AdobeAn).length === 0 && lib;
+  const message = 'Invalid animation file.' +
+    (deprecatedAnVer ? ' This version of CanvasUmd requires Animate CC 2017.5 or newer exports.': '');
+  throw new Error(message);
+}
+
 export function findOriginalComposition() {
-  if(typeof AdobeAn === 'undefined' && lib) { /* Animate CC 2015.2 */
-    const _lib = lib;
-    return { getLibrary: function() { return _lib; } };
-  } else if(AdobeAn) {
-    if(Object.keys(AdobeAn).length === 0 && lib) { /* Animate CC 2017.1 */
-      const _lib = lib;
-      return { getLibrary: function() { return _lib; } };
-    } else if (AdobeAn.compositions) {
-      return AdobeAn.compositions[Object.keys(AdobeAn.compositions)[0]]; /* Animate CC 2017.5 & 2018 */
-    }
+  if(AdobeAn && AdobeAn.compositions) {
+    return AdobeAn.compositions[Object.keys(AdobeAn.compositions)[0]]; /* Animate CC 2017.5 - 2020 */
   } else {
-    console.error('Invalid animation file')
+    return NoAnimationError();
   }
 }
 
 function AnimateCC_2017_5_plus(compId) { return AdobeAn.compositions[compId]; }
 
-function AnimateCC_2017_1() {
-  var _lib = lib;
-  lib = undefined;
-  return { getLibrary: function() { return _lib; } };
-}
-
-function AnimateCC_2015_2() {
-  var _lib = lib;
-  lib = undefined;
-  return { getLibrary: function() { return _lib; } };
-}
-
 export function enhancedCompositionGetter() {
-  if(typeof(AdobeAn) === 'undefined' && lib) return AnimateCC_2015_2;
-  else if(Object.keys(AdobeAn).length === 0 && lib) return AnimateCC_2017_1;
-  else if(AdobeAn && AdobeAn.compositions) return AnimateCC_2017_5_plus;
+  if(AdobeAn && AdobeAn.compositions) return AnimateCC_2017_5_plus;
+  else return NoAnimationError;
 }
 
 /**
