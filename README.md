@@ -5,13 +5,16 @@
 Wraps [Adobe Animate](https://www.adobe.com/products/animate.html) HTML5 canvas export files in [UMD](https://github.com/umdjs/umd) 
 for use in modern JavaScript module ecosystems
 
+Really old Animate CC export versions (2017.2 & below) **have been removed** from this version. Use adobe-animate-canvas-umd@2.0.0 if you
+require this support.
+
 ### Conversion example
 
 Give it a try at [wittnl.github.io/adobe-animate-canvas-umd](//wittnl.github.io/adobe-animate-canvas-umd/)
 
 ### Usage
 
-CanvasUmd depends on a global reference to `createjs`. That variable [must exist](http://code.createjs.com) 
+CanvasUmd depends on a global reference to `createjs` ([1.0.0 or higher](https://www.npmjs.com/package/createjs/v/1.0.0)). That variable [must exist](http://code.createjs.com) 
 before loading in order to work. Despite my best efforts, there's no workable solution for shimming it into a module format.
 
 **This library only works in a [browser environment](src/demo.js#L52) currently, CanvasRenderingContext2D support in 
@@ -61,7 +64,7 @@ characters are filtered out.
 
 ### <a name="how-it-works">How it works</a>
 
-CanvasUmd parses an original HTML5 canvas export from Animate CC (2017.1 - 2018) to determine the root animation name, composition id, 
+CanvasUmd parses an original HTML5 canvas export from Animate CC (2017.5 - 2020) to determine the root animation name, composition id, 
 and optionally keyframe labels by creating a temporary instance on intake. From these data an IIFE is appended to the
 bottom of the original definition, enabling [UMD support](examples/umd.js).
 
