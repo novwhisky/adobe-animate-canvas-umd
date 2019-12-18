@@ -7,7 +7,7 @@ function NoAnimationError() {
 }
 
 export function findOriginalComposition() {
-  if(AdobeAn && AdobeAn.compositions) {
+  if(typeof(AdobeAn) !== 'undefined' && AdobeAn.compositions) {
     return AdobeAn.compositions[Object.keys(AdobeAn.compositions)[0]]; /* Animate CC 2017.5 - 2020 */
   } else {
     return NoAnimationError();
