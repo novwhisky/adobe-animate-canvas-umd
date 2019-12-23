@@ -1,6 +1,6 @@
 # adobe-animate-canvas-umd
 
-[![Build Status](https://travis-ci.org/wittnl/adobe-animate-canvas-umd.svg?branch=master)](https://travis-ci.org/wittnl/adobe-animate-canvas-umd)
+[![Build Status](https://travis-ci.org/novwhisky/adobe-animate-canvas-umd.svg?branch=master)](https://travis-ci.org/novwhisky/adobe-animate-canvas-umd)
 
 Wraps [Adobe Animate](https://www.adobe.com/products/animate.html) HTML5 canvas export files in [UMD](https://github.com/umdjs/umd) 
 for use in modern JavaScript module ecosystems
@@ -10,7 +10,7 @@ require this support.
 
 ### Conversion example
 
-Give it a try at [wittnl.github.io/adobe-animate-canvas-umd](//wittnl.github.io/adobe-animate-canvas-umd/)
+Give it a try at [novwhisky.github.io/adobe-animate-canvas-umd](//novwhisky.github.io/adobe-animate-canvas-umd/)
 
 ### Usage
 
